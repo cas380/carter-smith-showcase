@@ -2,15 +2,17 @@
 {% assign thumbnail_width = include.w %}
 {% assign thumbnail_height = include.h %}
 
+<h1>hello {{ absolute_url }} hello</h1>
+
 <div class="project">
 	<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
-		<img class="thumbnail_img" src="{{ absolute_url }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
+		<img class="thumbnail_img" src="../assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
 		<img class="thumbnail_gif" 
 			{# Not every project will have a GIF... #}
 			{% if project.gif_url != "" %}
-				src="{{ absolute_url }}/assets/{{ project.gif_url }}" 
+				src="../assets/{{ project.gif_url }}" 
 			{% else %}
-				src="{{ absolute_url }}/assets/{{ project.img_url }}"
+				src="../assets/{{ project.img_url }}"
 			{% endif %}
 			alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
 	</div>
