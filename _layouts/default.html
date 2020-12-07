@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {%- include head.html -%}
 
@@ -11,6 +11,16 @@
       <div class="wrapper">
         {{ content }}
     </main>
+    
+    <h1>"{{ /assets/style.css | absolute_url }}"</h1>
+    <h1>"{{ style.css | relative_url }}"</h1>
+    
+    <h1>"{{ site.url }}"</h1>
+    <h1>"{{ site.baseurl }}"</h1>
+
+    <h1>"{{ site.url }}{{ site.baseurl }}/assets/style.css"</h1>
+
+    <h1>"{{ page.url }}"</h1>
 
     {% for project in site.data.projects %}
         {%- include project.html p=project w="400px" h="225px" -%}

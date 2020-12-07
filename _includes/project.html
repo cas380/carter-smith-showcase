@@ -6,13 +6,13 @@
 
 <div class="project">
 	<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
-		<img class="thumbnail_img" src="../assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
+		<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
 		<img class="thumbnail_gif" 
 			{# Not every project will have a GIF... #}
 			{% if project.gif_url != "" %}
-				src="../assets/{{ project.gif_url }}" 
+				src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.gif_url }}" 
 			{% else %}
-				src="../assets/{{ project.img_url }}"
+				src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}"
 			{% endif %}
 			alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
 	</div>
