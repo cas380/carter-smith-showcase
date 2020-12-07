@@ -1,0 +1,13 @@
+ - name: "Super Speedrun Ultimatum"
+   type: "School"
+   class_name: "Game Design"
+   class_number: "CS 1666"
+   description: "10 person team..."
+   img_url: "speedrun.png"
+   gif_url: "speedrun.gif"
+
+ - name: "Carter Smith Showcase"
+   type: "Fun"
+   description: "Isn't this meta?"
+   img_url: "site.png"
+   gif_url: ""

@@ -1,0 +1,24 @@
+{% assign project = include.p %}
+{% assign thumbnail_width = include.w %}
+{% assign thumbnail_height = include.h %}
+
+<div class="project">
+	<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
+		<img class="thumbnail_img" src="{{ absolute_url }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
+		<img class="thumbnail_gif" 
+			{# Not every project will have a GIF... #}
+			{% if project.gif_url != "" %}
+				src="{{ absolute_url }}/assets/{{ project.gif_url }}" 
+			{% else %}
+				src="{{ absolute_url }}/assets/{{ project.img_url }}"
+			{% endif %}
+			alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
+	</div>
+	<h3>{{ project.name }}</h3>
+
+	{% if project.type == "School" %}
+		<h5>{{ project.class_name }} [{{ project.class_number }}]</h5>
+	{% endif %}
+
+	<p>{{ project.description }}</p>
+</div>
