@@ -1,5 +1,21 @@
-<header class="site-header">
+<header>
+	{% assign default_paths = site.pages | map: "path" %}
+	{% assign page_paths = site.header_pages | default: default_paths %}
+	<nav>
+		{% for path in page_paths %}
+			{% assign my_page = site.pages | where: "path", path | first %}
+			{% if my_page.title %}
+				<a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+			{% endif %}
+		{% endfor %}
+	</nav>
 
+</header>
+
+
+
+
+<!--
     <div class="wrapper">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
@@ -29,3 +45,4 @@
       {%- endif -%}
     </div>
   </header>
+  -->

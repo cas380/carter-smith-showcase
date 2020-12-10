@@ -1,0 +1,85 @@
+{% assign semester = include.s %}
+{% assign left_right = include.lr | modulo: 2 %}
+
+
+{% capture term_left_colgroup %}
+	<colgroup>
+		<col span="1" style="width: 20%;">
+		<col span="1" style="width: 80%;">
+	</colgroup>
+{% endcapture %}
+
+{% capture term_right_colgroup %}
+	<colgroup>
+		<col span="1" style="width: 80%;">
+		<col span="1" style="width: 20%;">
+	</colgroup>
+{% endcapture %}
+
+{% capture term_name %}
+	<td>
+		<h1>{{ semester.term_name }}</h1>
+	</td>
+{% endcapture %}
+
+
+<table class="base-table">
+	{% if left_right == 0 %}
+		{{ term_left_colgroup }}
+	{% else %}
+		{{ term_right_colgroup }}
+	{% endif %}
+	<tbody>
+		<tr>
+			{% if left_right == 0 %}
+				{{ term_name }}
+			{% endif %}
+			<td>
+				<table class="grade-table">
+					<colgroup>
+						<col span="1" style="width: 10%;">
+						<col span="1" style="width: 78%;">
+						<col span="1" style="width: 12%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Term</th>
+							<th>Course Name</th>
+							<th>Grade</th>
+						</tr>
+						{% if semester.special == "highschool" %}
+							<tr>
+								<td class="notice" colspan="3">This course was taken during my final semester of high school.</td>
+							</tr>
+						{% elsif semester.special == "covid" %}
+							<tr>
+								<td class="notice" colspan="3">Grades, grade basis, and credits earned were impacted by the COVID-19 global public health crisis.</td>
+							</tr>
+						{% endif %}
+						{% for course in semester.courses %}
+							<tr>
+								<td>{{ semester.term }}</td>
+								<td>{{ course.class_name }} [{{ course.class_number }}]</td>
+								<td class="center
+								{% if course.grade == 'A+' %}
+									Ap
+								{% elsif course.grade == 'A' %}
+									A
+								{% elsif course.grade == 'A-' %}
+									Am
+								{% elsif course.grade == 'B+' %}
+									Bp
+								{% else %}
+									unknownGrade
+								{% endif %}"><strong>{{ course.grade }}</strong></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</td>
+			{% if left_right == 1 %}
+				{{ term_name }}
+			{% endif %}
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,33 @@
+---
+layout: default
+style: projects
+---
+
+<article class="post">
+	<header class="post-header">
+		<h1 class="post-title">{{ page.title | escape }}</h1>
+	</header>
+
+	<div class="post-content">
+		{{ content }}
+	</div>
+
+	<h1>"{{ style.css | relative_url }}"</h1>
+
+	<h1>"{{ site.url }}"</h1>
+	<h1>"{{ site.baseurl }}"</h1>
+
+	<h1>"{{ site.url }}{{ site.baseurl }}/assets/style.css"</h1>
+
+	<h1>"{{ page.url }}"</h1>
+
+	<h3>
+		{{ site.data.grades }}
+	</h3>
+
+	<div class="flex-container">
+		{% for project in site.data.projects %}
+			{% include project.html p=project w="400px" h="225px" l="" %}
+		{% endfor %}
+	</div>
+</article>

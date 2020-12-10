@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/default.css">
+		{% if layout.style == "projects" %}
+			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/projects.css">
+		{% elsif layout.style == "grades" %}
+			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/grades.css">
+		{% endif %}
+	</head>
+	<body>
+		{%- include header.html -%}
+		
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<main class="flex-container" aria-label="Content">
+			<div class="wrapper">
+			{{ content }}
+			</div>
+		</main>
 
-  {%- include head.html -%}
-
-  <body>
-
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-    </main>
-    
-    <h1>"{{ /assets/style.css | absolute_url }}"</h1>
-    <h1>"{{ style.css | relative_url }}"</h1>
-    
-    <h1>"{{ site.url }}"</h1>
-    <h1>"{{ site.baseurl }}"</h1>
-
-    <h1>"{{ site.url }}{{ site.baseurl }}/assets/style.css"</h1>
-
-    <h1>"{{ page.url }}"</h1>
-
-    {% for project in site.data.projects %}
-        {%- include project.html p=project w="400px" h="225px" -%}
-    {% endfor %}
-
-    {%- include footer.html -%}
-
-  </body>
-
+		{%- include footer.html -%}
+	</body>
 </html>

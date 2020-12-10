@@ -1,0 +1,32 @@
+/* =============================== */
+/* =====   Default Styling   ===== */
+/* =============================== */
+
+body {
+    background-color: #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-container {
+    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+}
+
+nav a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
