@@ -42,11 +42,6 @@ div.project {
     width: 800px;
 }
 
-.project-link {
-    text-decoration: none;
-    color: black;
-}
-
 div.project:hover {
     box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;

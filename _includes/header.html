@@ -1,6 +1,8 @@
 <header>
 	{% assign default_paths = site.pages | map: "path" %}
 	{% assign page_paths = site.header_pages | default: default_paths %}
+
+	<a href="{{ '/' | relative_url }}" class="no-link"><h1>Carter Smith Showcase</h1></a>
 	<nav>
 		{% for path in page_paths %}
 			{% assign my_page = site.pages | where: "path", path | first %}

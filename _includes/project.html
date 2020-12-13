@@ -2,7 +2,7 @@
 {% assign thumbnail_width = include.w %}
 {% assign thumbnail_height = include.h %}
 
-<a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.proj_url }}" class="project-link">
+<a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.proj_url }}" class="no-link">
 	<div class="project">
 		<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
 			<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
@@ -25,32 +25,3 @@
 		<p class="description">{{ project.description }}</p>
 	</div>
 </a>
-
-	<!--
-	<table>
-		<tr>
-			<td>
-				<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
-					<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
-					<img class="thumbnail_gif" 
-						{# Not every project will have a GIF... #}
-						{% if project.gif_url != "" %}
-							src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.gif_url }}" 
-						{% else %}
-							src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}"
-						{% endif %}
-						alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
-				</div>
-			</td>
-			<td>
-				<div class="thumbtext">
-					<h3>{{ project.name }}</h3>
-					{% if project.type == "School" %}
-						<h5>{{ project.class_name }} [{{ project.class_number }}]</h5>
-					{% endif %}
-					<p>{{ project.description }}</p>
-				</div>
-			</td>
-		</tr>
-	</table>
-	-->

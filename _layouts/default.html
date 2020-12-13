@@ -5,17 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/default.css">
-		{% if layout.style == "projects" %}
+		{% if layout.style == "project_list" %}
 			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/projects.css">
 		{% elsif layout.style == "grades" %}
 			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/grades.css">
 		{% endif %}
 	</head>
 	<body>
+		<br />
 		{%- include header.html -%}
 		
-		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-		<main class="flex-container" aria-label="Content">
+		<br /><br />
+		
+		<main class="flex-vertical-center">
 			<div class="wrapper">
 			{{ content }}
 			</div>

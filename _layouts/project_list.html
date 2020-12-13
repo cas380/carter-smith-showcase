@@ -1,6 +1,6 @@
 ---
 layout: default
-style: projects
+style: project_list
 ---
 
 <article class="post">
@@ -28,6 +28,7 @@ style: projects
 	<div class="flex-container">
 		{% for project in site.data.projects %}
 			{% include project.html p=project w="400px" h="225px" l="" %}
+			<br /><br />
 		{% endfor %}
 	</div>
 </article>

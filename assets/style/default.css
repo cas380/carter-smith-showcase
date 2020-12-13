@@ -7,7 +7,23 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.flex-container {
+.wrapper {
+    width: 800px;
+}
+
+/* project.html (layout) exclusive */
+.flex-horizontal-space {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.project-header * {
+    height: 20px;
+}
+
+.flex-vertical-center {
     background-color: hotpink;
     display: flex;
     flex-direction: column;
@@ -17,7 +33,9 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -29,4 +47,9 @@ nav {
 nav a {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.no-link {
+    text-decoration: none;
+    color: black;
 }
