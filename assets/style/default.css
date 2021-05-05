@@ -32,19 +32,6 @@ header nav a {
     color: black;
 }
 
-
-
-
-/* default body color below (desktop-first design) */
-@media screen and (max-width:800px) {
-    .body-content-wrapper {
-        background-color: orangered;
-        width: 100%;
-    }
-} /* pushing this to see what happens on my phone */
-
-
-
 /* ====================== */
 /* ===  Page Content  === */
 /* ====================== */
@@ -62,6 +49,18 @@ body {
 .body-content-wrapper {
     background-color: orange;
     width: 800px;
+}
+
+/* ======================== */
+/* ===  Mobile Content  === */
+/* ======================== */
+@media screen and (max-width: 800px) {
+    /* body-content-wrapper is set to 800px above, so if the screen
+       is smaller than that, we settle for the whole screen space   */
+    .body-content-wrapper {
+        background-color: orangered;
+        width: 100%;
+    }
 }
 
 /* ===================== */
