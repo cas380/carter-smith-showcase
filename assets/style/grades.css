@@ -1,6 +1,7 @@
-/* ================================ */
-/* =====   Semester Styling   ===== */
-/* ================================ */
+/*   -====================================-   */
+/* -===-   grades.html Layout Styling   -===- */
+/*   -====================================-   */
+
 
 table h1 {
 	text-align: center;
@@ -21,8 +22,6 @@ table .notice {
 
 table.base-table {
 	width: 100%;
-	margin-left: 30px;
-	margin-right: 30px;
 }
 
 table.grade-table {
@@ -44,7 +43,7 @@ table.grade-table .center {
 	text-align: center;
 }
 
-table .A, table .Ap {
+table .A, table .Ap, table .S {
 	background-color: #b7e1cd;
 }
 table .Am {

@@ -1,57 +1,68 @@
-/* =============================== */
-/* =====   Project Styling   ===== */
-/* =============================== */
+/*   -==========================================-   */
+/* -===-   project_list.html Layout Styling   -===- */
+/*   -==========================================-   */
 
-/* Switch out thumbnail for IMG and GIF on hover */
-div.project div.thumbnail img.thumbnail_img {
-    display: block;
-}
-div.project div.thumbnail img.thumbnail_gif {
-    display: none;
-}
-div.project div.thumbnail:hover img.thumbnail_img {
-    display: none;
-}
-div.project div.thumbnail:hover img.thumbnail_gif {
-    display: block;
-}
 
-div.project .name {
+/* ======================== */
+/* ===  Button Content  === */
+/* ======================== */
+div.project-button .name {
     font-size: 26px;
     margin: 0px;
     margin-bottom: 6px;
     display: inline-block;
     font-weight: bolder;
 }
-div.project .class-info {
+div.project-button .class-info {
     font-size: 18px;
     margin: 0px;
     margin-bottom: 6px;
     display: inline-block;
     color: gray;
 }
-div.project .description {
+div.project-button .description {
     font-size: 18px;
     display: inline;
 }
-
-div.project {
-    background-color: #eee;
-    border-radius: 20px;
-    padding: 15px;
-    width: 800px;
-}
-
-div.project:hover {
-    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-div.project:hover .name {
-    text-decoration: underline;
-}
-
-div.project .thumbnail {
+div.project-button .thumbnail {
     float: left;
     margin-right: 15px;
     margin-bottom: 3px;
+}
+
+/* ====================== */
+/* ===  Button Looks  === */
+/* ====================== */
+div.project-button {
+    background-color: #eee;
+    border-radius: 20px;
+
+    margin: auto;
+    padding: 15px;
+    width: 95%; /*  floor((800px - 30px padding)/800px) - 1  */
+    /* This can now dynamically scale to mobile 
+       (floor-1 helps to ensure no horizontal scrolling) */
+}
+
+/* Imply link on hover */
+div.project-button:hover {
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+div.project-button:hover .name {
+    text-decoration: underline;
+}
+
+/* Switch out thumbnail for IMG and GIF on hover */
+div.project-button div.thumbnail img.thumbnail_img {
+    display: block;
+}
+div.project-button div.thumbnail img.thumbnail_gif {
+    display: none;
+}
+div.project-button div.thumbnail:hover img.thumbnail_img {
+    display: none;
+}
+div.project-button div.thumbnail:hover img.thumbnail_gif {
+    display: block;
 }

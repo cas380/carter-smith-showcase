@@ -27,7 +27,7 @@ style: project_list
 
 	<div class="flex-container">
 		{% for project in site.data.projects %}
-			{% include project.html p=project w="400px" h="225px" l="" %}
+			{% include project-button.html p=project w="400px" h="225px" l="" %}
 			<br /><br />
 		{% endfor %}
 	</div>
