@@ -37,17 +37,11 @@ header nav a {
 
 /* default body color below (desktop-first design) */
 @media screen and (max-width:800px) {
-/* style changes when the screen gets smaller */
-    body {
-        background-color: red;
+    .body-content-wrapper {
+        background-color: orangered;
+        width: 100%;
     }
 } /* pushing this to see what happens on my phone */
-@media screen and (max-width:480px) {
-    /* And even smaller */
-    body {
-        background-color: purple;
-    }
-}
 
 
 
