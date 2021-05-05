@@ -20,7 +20,7 @@
 
 title: Your awesome title
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
@@ -35,6 +35,14 @@ github_username:  jekyll
 #theme: minima MY_THEME
 plugins:
   - jekyll-feed
+  
+# Find the markdowns to turn into pages
+include:
+  - _main-pages
+  - _project-pages
+# Don't move this stuff over into _site
+exclude:
+  - run.bat
 
 # Exclude from processing.
 # The following items will not be processed, by default.

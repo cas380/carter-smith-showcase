@@ -2,6 +2,10 @@
 /* =====   Default Styling   ===== */
 /* =============================== */
 
+h1 {
+    text-align: center;
+}
+
 body {
     background-color: #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,6 +25,9 @@ body {
 }
 .project-header * {
     height: 20px;
+}
+.project-footer {
+    text-align: center;
 }
 
 .flex-vertical-center {

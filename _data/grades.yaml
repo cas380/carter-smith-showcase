@@ -125,3 +125,24 @@
     - class_name: "INTRO TO ARTIFICL INTELLIGENCE"
       class_number: "CS 1571"
       grade: "A"
+
+ - term: 2214
+   term_name: "Spring<br />2021"
+   special: "covid"
+   courses:
+    - class_name: "DATABASE MANAGEMENT SYSTEMS"
+      class_number: "CS 1555"
+      grade: ""
+    - class_name: "INTRODUCTION TO DATA SCIENCE"
+      class_number: "CS 1656"
+      grade: ""
+    - class_name: "INTRO TO CLOUD COMPUTING"
+      class_number: "CS 1660"
+      grade: "A"
+    - class_name: "INTRO TO COMPUTER VISION"
+      class_number: "CS 1674"
+      grade: ""
+    - class_name: "TEAM PROJECT DESIGN & IMPLMNTN"
+      class_number: "CS 1980"
+      grade: "S"
+      

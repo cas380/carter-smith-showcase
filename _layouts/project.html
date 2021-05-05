@@ -6,8 +6,9 @@ layout: default
 	<header>
 		<div class="project-header">
 			<div class="flex-horizontal-space">
-				<h3>{{ page.course_number }}</h3>
-				<h3>{{ page.course_name }}</h3>
+				<h3 style="transform: rotate(-5deg);">{{ page.course_number }}</h3>
+				<h3 style="width: 100px;"></h3>
+				<h3 style="transform: rotate(5deg);">{{ page.course_name }}</h3>
 			</div>
 			<h1>{{ page.project_name }}</h1>
 		</div>
@@ -15,5 +16,9 @@ layout: default
 
 	<div class="post-content">
 		{{ content }}
+	</div>
+
+	<div class="project-footer">
+		<h4><em>Check out this project on <a href="{{ page.github }}" target="_Blank">Github</a>.</em></h4>
 	</div>
 </article>
