@@ -1,21 +1,90 @@
-/* =============================== */
-/* =====   Default Styling   ===== */
-/* =============================== */
+/*   -=====================================-   */
+/* -===-   default.html Layout Styling   -===- */
+/*   -=====================================-   */
 
+/* This also accounts for the project.html
+   layout, a sublayout of default.html     */
+
+
+/* ===================== */
+/* ===  Page Header  === */
+/* ===================== */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 h1 {
     text-align: center;
 }
+header nav {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+}
+header nav a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.no-link {
+    text-decoration: none;
+    color: black;
+}
 
+
+
+
+/* default body color below (desktop-first design) */
+@media screen and (max-width:800px) {
+/* style changes when the screen gets smaller */
+    body {
+        background-color: red;
+    }
+} /* pushing this to see what happens on my phone */
+@media screen and (max-width:480px) {
+    /* And even smaller */
+    body {
+        background-color: purple;
+    }
+}
+
+
+
+/* ====================== */
+/* ===  Page Content  === */
+/* ====================== */
 body {
     background-color: #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.wrapper {
-    width: 800px;
+.flex-vertical-center {
+    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body-content-wrapper {
+    background-color: orange;
+    width: 60%;/*53%;*/
 }
 
-/* project.html (layout) exclusive */
+/* ===================== */
+/* ===  Page Footer  === */
+/* ===================== */
+footer {
+    background-color: blanchedalmond;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* ================================== */
+/* ===  Project Layout Exclusive  === */
+/* ================================== */
 .flex-horizontal-space {
     background-color: blue;
     display: flex;
@@ -28,35 +97,4 @@ body {
 }
 .project-footer {
     text-align: center;
-}
-
-.flex-vertical-center {
-    background-color: hotpink;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    justify-content: flex-start;
-}
-
-nav a {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.no-link {
-    text-decoration: none;
-    color: black;
 }
