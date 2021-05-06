@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/default.css">
+		<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/animation.css">
 		{% if layout.style == "project_list" %}
 			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/style/projects.css">
 		{% elsif layout.style == "grades" %}
@@ -12,16 +13,32 @@
 		{% endif %}
 	</head>
 	<body>
-		<br />
-		{%- include header.html -%}
-		<br />
-		<main class="flex-vertical-center">
-			<div class="body-content-wrapper">
-				{{ content }}
-			</div>
-		</main>
-		<br />
-		<br />
-		{%- include footer.html -%}
+		<div class="context">
+			<br />
+			{%- include header.html -%}
+			<br />
+			<main class="flex-vertical-center">
+				<div class="body-content-wrapper">
+					{{ content }}
+				</div>
+			</main>
+			<br />
+			<br />
+			{%- include footer.html -%}
+		</div>
+		<div class="area">
+			<ul class="circles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
 	</body>
 </html>

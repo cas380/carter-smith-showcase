@@ -6,9 +6,11 @@
    layout, a sublayout of default.html     */
 
 
+@import url(https://fonts.googleapis.com/css?family=Graduate);
+/* Font from https://fonts.google.com/specimen/Graduate#standard-styles */
 @font-face {
-    /* Font from https://fonts.google.com/specimen/Graduate#standard-styles */
-	font-family: 'Graduate';
+    /* A back-up using the TTF in case the import dependency somehow goes down */
+	font-family: 'Manual Graduate';
 	src: URL('../fonts/Graduate-Regular.ttf') format('truetype');
 }
 
@@ -23,8 +25,8 @@ header {
 }
 h1 {
     text-align: center;
-    font-family: 'Graduate', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                            /* Use the same backups as in the body below */
+    font-family: 'Graduate', 'Manual Graduate', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                /* Use the same backups as in the body below */
 }
 header img {
     margin-bottom: 10px;
@@ -55,14 +57,14 @@ body {
     overflow-x: hidden;
 }
 .flex-vertical-center {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .body-content-wrapper {
-    background-color: orange;
+    /* background-color: orange; */
     width: 800px;
 }
 
@@ -73,7 +75,7 @@ body {
     /* body-content-wrapper is set to 800px above, so if the screen
        is smaller than that, we settle for the whole screen space   */
     .body-content-wrapper {
-        background-color: orangered;
+        /* background-color: orangered; */
         width: 100%;
     }
 }
