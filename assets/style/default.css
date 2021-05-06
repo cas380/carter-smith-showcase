@@ -6,6 +6,12 @@
    layout, a sublayout of default.html     */
 
 
+@font-face {
+    /* Font from https://fonts.google.com/specimen/Graduate#standard-styles */
+	font-family: 'Graduate';
+	src: URL('../fonts/Graduate-Regular.ttf') format('truetype');
+}
+
 /* ===================== */
 /* ===  Page Header  === */
 /* ===================== */
@@ -17,6 +23,14 @@ header {
 }
 h1 {
     text-align: center;
+    font-family: 'Graduate', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            /* Use the same backups as in the body below */
+}
+header img {
+    margin-bottom: 10px;
+}
+header nav img {
+    margin-top: 4px;
 }
 header nav {
     display: flex;
@@ -38,6 +52,7 @@ header nav a {
 body {
     background-color: #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 .flex-vertical-center {
     background-color: hotpink;
@@ -68,11 +83,28 @@ body {
 /* ===================== */
 footer {
     background-color: blanchedalmond;
-    height: 10%;
-    width: 100%;
-    position: fixed;
+    height: 50px;
+    width: 110%;
+    left: -5%;
     bottom: 0;
-    left: 0;
+    position: fixed;
+    /* Absolute version
+    height: 50px;
+    width: 110%;
+    margin-left: -5%;
+    position: absolute;
+    */
+}
+footer nav {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(75, 250, 40);
+    text-align: center;
+}
+footer nav a {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* ================================== */

@@ -5,13 +5,13 @@
 <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.proj_url }}" class="no-link">
 	<div class="project-button">
 		<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
-			<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
+			<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
 			<img class="thumbnail_gif" 
 				{# Not every project will have a GIF... #}
 				{% if project.gif_url != "" %}
-					src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.gif_url }}" 
+					src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.gif_url }}" 
 				{% else %}
-					src="{{ site.url }}{{ site.baseurl }}/assets/{{ project.img_url }}"
+					src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}"
 				{% endif %}
 				alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
 		</div>
