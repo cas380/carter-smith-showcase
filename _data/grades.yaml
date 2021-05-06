@@ -94,7 +94,7 @@
 
  - term: 2207
    term_name: "Summer<br />2020"
-   special: "covid"
+   special: ""
    courses:
     - class_name: "SOFTWARE ENGINEERING"
       class_number: "CS 1530"
@@ -105,7 +105,7 @@
 
  - term: 2211
    term_name: "Fall<br />2020"
-   special: "covid"
+   special: ""
    courses:
     - class_name: "PROJECTS IN DIGITAL COMPOSITIN"
       class_number: "ENGCMP 1130"
@@ -128,7 +128,7 @@
 
  - term: 2214
    term_name: "Spring<br />2021"
-   special: "covid"
+   special: ""
    courses:
     - class_name: "DATABASE MANAGEMENT SYSTEMS"
       class_number: "CS 1555"

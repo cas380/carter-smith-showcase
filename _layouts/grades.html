@@ -4,13 +4,13 @@ style: grades
 ---
 
 <article>
-	<!-- Content of markdown -->
-	<div>{{ content }}</div>
-
 	{% assign i = 0 %}
 	{% for semester in site.data.grades %}
 		{% include sem_table.html s=semester lr=i %}
 		<br />
 		{% assign i = i | plus: 1 %}
 	{% endfor %}
+	
+	<!-- Content of markdown -->
+	<div>{{ content }}</div>
 </article>

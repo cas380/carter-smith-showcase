@@ -14,6 +14,13 @@ table h1 {
 table.base-table {
 	width: 100%;
 }
+table.GPA {
+	width: 80%;
+	margin: auto;
+}
+.GPA span {
+	font-family: 'Arial', sans-serif;
+}
 
 /* ================================ */
 /* ===  Grade Table Formatting  === */
@@ -56,7 +63,7 @@ table .Am {
 	background-color: #d9ead3;
 }
 table .Bp {
-	background-color: #f9cb9c;
+	background-color: #ffd6ad;
 }
 table .unknownGrade {
 	background-color: #d016ff;
