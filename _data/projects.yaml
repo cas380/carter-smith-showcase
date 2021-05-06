@@ -3,15 +3,11 @@
    class_name: "Game Design"
    class_number: "CS 1666"
    description: >-
-      10 person team... aaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaa 
-      aaaaaaaaaaa aweuvya wehkawu hejdb aiueo hiaeuoh aewioyfbh aweifuah 
-      weiaysuh dgfiauweoh fiawuef yhawi e foawue fouawe ofyw aefuy waefuy 
-      aeowuf oauwe fouawhe fuaw hefuy aeoufh awoue fouad afuew yfweauy 
-      flajhd fouaeh fyaw efouaywe fhawe fouaw eouf aweuofy woeuy fouhe 
-      fouay weofuy aewoufh oausdy foaue hfoua ewfouy aweoufy aweouf oaweh 
-      fouaw eofu ewufh awejhf auoweh fouawehfha ewofuy weaouf ahd fouaweh 
-      foue dfouyea foue wafuha dfh aeouf aowef aaaaaaaa aaaaaaa aaaaaaaa 
-      aaaaaaaa aaaaaaa aaa aaaaaaaa aaaa aaaa aa aaaaaaaaaaaaaaaaaa
+      The goal of CS 1666 was to– over the length of the entire term– 
+      create a fully functioning game of our choosing from scratch… and 
+      I don’t mean Scratch the programming language, I mean writing 
+      literally all of the game code (except for the SDL2 library) in 
+      C++ by ourselves.
    img_url: "speedrun.png"
    gif_url: "speedrun.gif"
    proj_url: "speedrun"
@@ -33,9 +29,29 @@
    img_url: "cow.jpg"
    gif_url: "cow.gif"
    proj_url: "cow-clicker-2"
+   
+#  - name: "FUSE Extension"
+#    type: "School"
+#    class_name: "CAPSTONE"
+#    class_number: "CS 1980"
+#    description: >-
+#       sample text this was our final project
+#    img_url: ""
+#    gif_url: ""
+#    proj_url: "capstone"
+   
+#  - name: ""
+#    type: ""
+#    class_name: ""
+#    class_number: ""
+#    description: >-
+#       sample
+#    img_url: ""
+#    gif_url: ""
+#    proj_url: ""
 
- - name: "Carter Smith Showcase"
-   type: "Fun"
-   description: "Isn't this meta?"
-   img_url: "site.png"
-   gif_url: ""
+#  - name: "Carter Smith Showcase"
+#    type: "Fun"
+#    description: "Isn't this meta?"
+#    img_url: "site.png"
+#    gif_url: ""

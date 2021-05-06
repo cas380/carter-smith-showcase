@@ -45,6 +45,7 @@ header nav {
 header nav a {
     padding-left: 10px;
     padding-right: 10px;
+    color: black;
 }
 .no-link {
     text-decoration: none;
@@ -69,6 +70,14 @@ body {
 .body-content-wrapper {
     /* background-color: orange; */
     width: 800px;
+}
+p {
+    font-size: 18px;
+    text-indent: 45px;
+    text-align: justify;
+}
+.no-indent {
+    text-indent: 0px;
 }
 
 /* ===================== */
@@ -114,17 +123,25 @@ footer nav {
 /* ===  Project Layout Exclusive  === */
 /* ================================== */
 .flex-horizontal-space {
-    background-color: blue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+    top: -8px;
+}
+.flex-horizontal-space h3 {
+    font-family: 'Graduate', 'Manual Graduate', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .project-header * {
     height: 20px;
 }
 .project-footer {
     text-align: center;
+}
+figure img {
+    width: 100%;
+    border: 5px outset #999;
 }
 
 /* ======================== */
@@ -147,6 +164,5 @@ footer nav {
        negate the max-width check                          */
     header nav img.desktop {
         display: block;
-        background-color: rebeccapurple;
     }
 }
