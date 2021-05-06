@@ -68,23 +68,12 @@ body {
     width: 800px;
 }
 
-/* ======================== */
-/* ===  Mobile Content  === */
-/* ======================== */
-@media screen and (max-width: 800px) {
-    /* body-content-wrapper is set to 800px above, so if the screen
-       is smaller than that, we settle for the whole screen space   */
-    .body-content-wrapper {
-        /* background-color: orangered; */
-        width: 100%;
-    }
-}
-
 /* ===================== */
 /* ===  Page Footer  === */
 /* ===================== */
 footer {
-    background-color: blanchedalmond;
+    background-color: #ccc;
+    border-top: 3px ridge #bbb;
     height: 50px;
     width: 110%;
     left: -5%;
@@ -98,15 +87,24 @@ footer {
     */
 }
 footer nav {
-    width: 40%;
-    height: 100%;
+    width: 800px;
+    position: relative;
+    height: 50%;
+    top: 25%;
     margin: auto;
-    background-color: rgb(75, 250, 40);
+    /* background-color: rgb(75, 250, 40); */
     text-align: center;
 }
-footer nav a {
-    padding-left: 10px;
-    padding-right: 10px;
+.foot-item {
+    display: inline-block;
+    /* background-color: aqua; */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.foot-item img {
+    position: relative;
+    top: 5px;
+    padding-right: 2px;
 }
 
 /* ================================== */
@@ -124,4 +122,19 @@ footer nav a {
 }
 .project-footer {
     text-align: center;
+}
+
+/* ======================== */
+/* ===  Mobile Content  === */
+/* ======================== */
+@media screen and (max-width: 800px) {
+    /* body-content-wrapper is set to 800px above, so if the screen
+       is smaller than that, we settle for the whole screen space   */
+    .body-content-wrapper {
+        /* background-color: orangered; */
+        width: 100%;
+    }
+    footer nav {
+        width: 100%;
+    }
 }
