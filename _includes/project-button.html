@@ -1,9 +1,109 @@
 {% assign project = include.p %}
 {% assign thumbnail_width = include.w %}
 {% assign thumbnail_height = include.h %}
+{% assign first_p = include.first_p %}
+
+<style>
+.flex-right {
+	display: flex;
+	align-content: space-evenly;
+    overflow: hidden;
+	height: {{ thumbnail_height }};
+}
+.flex-down {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: -45px;
+}
+.flex-down p {
+	margin: 0px; /* I have NO IDEA where this margin is coming from */
+}
+.fade {
+	width: 100%;
+	height: 40px;
+	z-index: 10;
+	position: relative;
+	top: 185px;
+}
+</style>
+
 
 <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.proj_url }}" class="no-link">
 	<div class="project-button">
+		<div class="flex-right">
+			<div>
+				<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
+					<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}" alt="The thumbnail image." width="100%" />
+					<img class="thumbnail_gif" 
+						{# Not every project will have a GIF... #}
+						{% if project.gif_url != "" %}
+							src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.gif_url }}" 
+						{% else %}
+							src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}"
+						{% endif %}
+						alt="The thumbnail GIF." width="100%" />
+				</div>
+			</div>
+			<div>
+				<img class="fade" src="{{ site.url }}{{ site.baseurl }}/assets/fade.png" alt="gradient" />
+				<div class="flex-down">
+					<div>
+						<h3 class="name">{{ project.name }}</h3>
+					</div>
+					{% if project.type == "School" %}
+					<div>
+						<h5 class="class-info">{{ project.class_name }} [{{ project.class_number }}]</h5>
+					</div>
+					{% endif %}
+					<div>
+						<p class="no-indent">{{ first_p }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+		<table>
+			<tr>
+				<td class="image" rowspan="3">
+					<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
+						<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
+						<img class="thumbnail_gif" 
+							{# Not every project will have a GIF... #}
+							{% if project.gif_url != "" %}
+								src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.gif_url }}" 
+							{% else %}
+								src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}"
+							{% endif %}
+							alt="The thumbnail GIF." width={{thumbnail_width}} height={{thumbnail_height}} />
+					</div>
+				</td>
+				<td class="title">
+					<div>
+						<h3 class="name">{{ project.name }}</h3>
+					</div>
+				</td>
+			</tr>
+			{% if project.type == "School" %}
+			<tr>
+				<td class="title">
+					<div>
+						<h5 class="class-info">{{ project.class_name }} [{{ project.class_number }}]</h5>
+					</div>
+				</td>
+			</tr>
+			{% endif %}
+			<tr>
+				<td class="description">
+					<div>
+						{{ first_p }}
+					</div>
+				</td>
+			</tr>
+		</table>
+		-->
+
+		<!--
 		<div class="thumbnail" style="width: {{thumbnail_width}}; height: {{thumbnail_height}};">
 			<img class="thumbnail_img" src="{{ site.url }}{{ site.baseurl }}/assets/previews/{{ project.img_url }}" alt="The thumbnail image." width={{thumbnail_width}} height={{thumbnail_height}} />
 			<img class="thumbnail_gif" 
@@ -22,8 +122,7 @@
 			<h5 class="class-info">{{ project.class_name }} [{{ project.class_number }}]</h5>
 			<br />
 		{% endif %}
-		<p class="description">{{ project.description }}</p>
-		<!-- I put the first paragraph of each article in that page's front matter, but don't know
-		how to access it from here... so I'm just stacking up redundancy here.... -->
+		<p class="description">{{ first_p }}</p>
+		-->
 	</div>
 </a>

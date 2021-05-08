@@ -9,3 +9,6 @@ permalink: /projects/capstone
 ---
 
 FUSEEEYYYYY WOOOZYYY
+
+3 cell table for the reports
+and presentations

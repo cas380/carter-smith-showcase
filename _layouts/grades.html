@@ -4,6 +4,9 @@ style: grades
 ---
 
 <article>
+	<h1>University of Pittsburgh</h1>
+	<h3 class="graduate" style="position: relative; top: -10px;">Bachelor of Science in Computer Science</h3>
+
 	{% assign i = 0 %}
 	{% for semester in site.data.grades %}
 		{% include sem_table.html s=semester lr=i %}

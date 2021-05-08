@@ -5,7 +5,17 @@ style: project_list
 
 <article>
 	{% for project in site.data.projects %}
-		{% include project-button.html p=project w="400px" h="225px" %}
+		<!-- Find the right first_p by comparing the page names -->
+		{% capture THIS_P %}<strong>ERROR: first_p not found for this page.</strong>{% endcapture %}
+		{% capture current_project %}{{ project.proj_url }}.md{% endcapture %}
+		{% for page in site.pages %}
+			{% capture current_page %}{{ page.name }}{% endcapture %}
+			{% if current_project == current_page %}
+				{% capture THIS_P %}{{ page.first_p }}{% endcapture %}
+			{% endif %}
+		{% endfor %}
+
+		{% include project-button.html p=project w="400px" h="225px" first_p=THIS_P %}
 		<br /><br />
 	{% endfor %}
 </article>

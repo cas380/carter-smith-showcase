@@ -20,10 +20,6 @@ div.project-button .class-info {
     display: inline-block;
     color: gray;
 }
-div.project-button .description {
-    font-size: 18px;
-    display: inline;
-}
 div.project-button .thumbnail {
     float: left;
     margin-right: 15px;
@@ -42,6 +38,10 @@ div.project-button {
     width: 95%; /*  floor((800px - 30px padding)/800px) - 1  */
     /* This can now dynamically scale to mobile 
        (floor-1 helps to ensure no horizontal scrolling) */
+}
+.project-button table, td {
+    border-collapse: collapse;
+    border: 1px solid black;
 }
 
 /* Imply link on hover */
