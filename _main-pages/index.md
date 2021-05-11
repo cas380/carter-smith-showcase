@@ -1,34 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 permalink: /
 ---
 
 <h1>This site is a work-in-progress!</h1>
 
-**I guess I'll use the index (for now) as a markdown example**
+This is where I intend to show off some stuff I've made over my school career (and maybe beyond).
+I recently graduated, so my grades on the grades page are all final. 
+I'll be adding more projects to the projects page soon. 
+Feel free to check out the links in the footer of the site.
+The site should change dynamically to fit smaller screen sizes (like on mobile).
 
-\**I guess I'll use the index (for now) as a markdown example*\*
-
-<strong>you can mix html and markdown which is weird</strong>
-
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-![alt-text](assets/doesntexist.png){:class="img-responsive"}
-![alt-text](assets/previews/speedrun.png){:class="img-responsive"}
-
-<img src="assets/previews/speedrun.png" alt="HTML attempt" width="40px" height="40px" />
-
-[jekyll-organization]: https://github.com/jekyll
-
-navbar to: grades -> resume -> projects
+<!-- navbar to: grades -> resume -> projects -->
