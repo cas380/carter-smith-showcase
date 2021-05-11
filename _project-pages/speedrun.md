@@ -77,7 +77,7 @@ it was too late in the project at this point to do anything of the sort.
 
 Our final commit to the project featured networked multiplayer (which works 
 over both localhost and LAN); randomized maps with bouncy, icy, and normal 
-terrian; and obstacles such as boulders, moving platforms, and rooms.
+terrain; and obstacles such as boulders, moving platforms, and rooms.
 
 <figure>
     <img src="{{site.url}}{{site.baseurl}}/assets/projects/speedrun/Bounce.gif" alt="demo" />

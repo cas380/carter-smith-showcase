@@ -6,6 +6,8 @@ layout: default
 permalink: /
 ---
 
+<h1>This site is a work-in-progress!</h1>
+
 **I guess I'll use the index (for now) as a markdown example**
 
 \**I guess I'll use the index (for now) as a markdown example*\*
@@ -28,3 +30,5 @@ You can find the source code for Jekyll at GitHub:
 <img src="assets/previews/speedrun.png" alt="HTML attempt" width="40px" height="40px" />
 
 [jekyll-organization]: https://github.com/jekyll
+
+navbar to: grades -> resume -> projects
